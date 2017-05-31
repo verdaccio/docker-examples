@@ -1,0 +1,9 @@
+server {
+  listen 80 default_server;
+	access_log /var/log/nginx/verdaccio.log;
+	charset utf-8;
+  location / {
+    proxy_pass              http://verdaccio:4873/;
+    proxy_set_header        Host $host;
+  }
+}
