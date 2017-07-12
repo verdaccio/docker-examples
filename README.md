@@ -10,3 +10,4 @@ Feel free to contribute whether you considere any use case is relevant for the p
 * Docker + Apache + Verdaccio
 * Docker + Nginx + Verdaccio
 * Kubernetes (minikube) + Verdaccio (Basic Configuration)
+* Docker + Local Storage
