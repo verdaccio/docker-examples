@@ -23,7 +23,7 @@ $> kubectl create -f deployment.yaml
 deployment "verdaccio-deployment" created
 ```
 
-* Check whether the Deployment was great
+* Check whether the Deployment was successful
 
 ```bash
 $> kubectl get deployments
@@ -37,7 +37,7 @@ verdaccio-deployment   1         1         1            1           19m
 $> kubectl create -f service.yaml
 ```
 
-* Check Service
+* Check the Service
 
 ```bash
 kubectl get services
@@ -52,7 +52,7 @@ verdaccio    10.0.0.160   <pending>     4873:30061/TCP   20m
 http://192.168.99.100:30061/
 ```
 
-You can see in action in the Dashboard
+You can see the Dashboard in action
 
 ```
 http://192.168.99.100:30000/#!/service?namespace=default
