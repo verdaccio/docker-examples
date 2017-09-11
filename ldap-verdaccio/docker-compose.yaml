@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  verdaccio:
+    build: verdaccio-ldap/
+    ports:
+      - "4873:4873"
+    volumes:
+      - verdaccio:/verdaccio 
+  ldapserver:
+    image: larrycai/openldap:latest
+    ports:
+      - 389:389
+    links:
+        - verdaccio
+volumes:
+  verdaccio:
+    driver: local
