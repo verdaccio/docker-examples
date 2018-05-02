@@ -1,4 +1,4 @@
-# Verdaccio Docker Examples
+# Verdaccio Docker + Kubernetes Examples
 
 ![alt verdaccio](https://www.verdaccio.org/img/devops_support_grey.png "verdaccio devops")
 
