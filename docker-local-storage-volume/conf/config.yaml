@@ -26,6 +26,10 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
+  '@jota/*':
+      access: $all
+      publish: $all
+
   '@*/*':
     # scoped packages
     access: $all

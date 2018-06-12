@@ -2,8 +2,8 @@ version: '2'
 
 services:
   verdaccio:
-    image: verdaccio/verdaccio:latest
-    container_name: verdaccio
+    image: verdaccio/verdaccio:3
+    container_name: verdaccio-3-docker-local-storage-vol
     ports:
       - "4873:4873"
     volumes:
