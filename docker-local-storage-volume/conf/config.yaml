@@ -19,6 +19,15 @@ auth:
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
     #max_users: 1000
+security:
+  api:
+    jwt:
+      sign:
+        expiresIn: 60d
+        notBefore: 1
+  web:
+    sign:
+      expiresIn: 7d
 
 # a list of other known repositories we can talk to
 uplinks:
@@ -51,7 +60,12 @@ packages:
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
 
+# To use `npm audit` uncomment the following section
+middlewares:
+  audit:
+    enabled: true
+
 # log settings
 logs:
-  - {type: stdout, format: pretty, level: http}
+  - {type: stdout, format: pretty, level: trace}
   #- {type: file, path: verdaccio.log, level: info}
