@@ -2,7 +2,7 @@ version: '2'
 
 services:
   verdaccio:
-    image: verdaccio/verdaccio:beta
+    image: verdaccio/verdaccio:latest
     container_name: verdaccio-3-docker-plugin-external
     ports:
       - "4873:4873"
