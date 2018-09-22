@@ -1,6 +1,4 @@
-## Verdaccio and https-portal Example
-
-
+# Verdaccio and https-portal Example
 
 Run `verdaccio` under fully automated HTTPS server powered by Nginx, Let's Encrypt  was never so easy. Using [https-portal](https://github.com/SteveLTN/https-portal) all is builtin and no need to extra configuration.
 
