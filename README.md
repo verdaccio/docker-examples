@@ -16,6 +16,7 @@ Feel free to contribute whether you considere any use case is relevant for the p
 * Docker + External Plugins
 * Docker + LDAP (OpenLDAP) Server + Verdaccio
 * [Docker + Gitlab](gitlab-verdaccio/README.md)
+* Docker + https-portal Example
 
 ### Kubernetes
 
