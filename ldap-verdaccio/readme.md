@@ -1,54 +1,66 @@
-# Verdaccio and LDAP Server
+# Verdaccio and OpenLDAP Server
 
 Running `verdaccio` with the plugin [https://github.com/Alexandre-io/verdaccio-ldap](https://github.com/Alexandre-io/verdaccio-ldap).
 
-**EXPERIMENTAL** - It does not work yet.
+## Introduction
 
+This example is based on:
+
+- **OpenLDAP** (ldap://localhost:389)
+- **phpLDAP Admin** (http://localhost:8080/)
+- **Verdaccio** (http://localhost:4873/)
+
+It provides a published package named `@scope/example` that only authenticated users can access.
+
+```
+packages:
+  '@scope/*':
+    access: marpontes zach leonardo
+    publish: $authenticated
+    proxy: npmjs
+  '@*/*':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+  '**':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+```
+
+## Usage
 
 To run the containers, run the following command in this folder, it should starts the containers in dettach mode.
 
 ```bash
-➜ docker-compose up -d
-```
-
-To recreate the nginx image you can force the build.
-
-```bash
 ➜ docker-compose up --force-recreate --build
+
 Building verdaccio
-Step 1/18 : FROM node:8.4.0-alpine
- ---> 016382f39a51
-Step 2/18 : LABEL maintainer "https://github.com/verdaccio/verdaccio"
+Step 1/2 : FROM verdaccio/verdaccio
+ ---> 5375f8604262
+Step 2/2 : RUN npm i && npm install verdaccio-ldap
  ---> Using cache
- ---> a6ddcb63eb95
-Step 3/18 : RUN apk --no-cache add openssl &&     wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 &&     chmod +x /usr/local/bin/dumb-init &&     apk del openssl
- ---> Using cache
- ---> 52ba1e399e93
-Step 4/18 : ENV APPDIR /usr/local/app
-...
-Successfully tagged ldapverdaccio_verdaccio:latest
-Recreating ldapverdaccio_verdaccio_1 ... 
-Recreating ldapverdaccio_verdaccio_1 ... done
-Recreating ldapverdaccio_ldapserver_1 ... 
-Recreating ldapverdaccio_ldapserver_1 ... done
-Attaching to ldapverdaccio_verdaccio_1, ldapverdaccio_ldapserver_1
-ldapserver_1  | 59b6f026 @(#) $OpenLDAP: slapd  (Ubuntu) (May 25 2015 13:12:01) $
-ldapserver_1  | 	buildd@toyol:/build/buildd/openldap-2.4.31/debian/build/servers/slapd
-ldapserver_1  | 59b6f026 hdb_db_open: database "dc=nodomain": unclean shutdown detected; attempting recovery.
-verdaccio_1   |  warn --- config file  - /verdaccio/conf/config.yaml
-ldapserver_1  | 59b6f026 hdb_db_open: database "dc=openstack,dc=org": unclean shutdown detected; attempting recovery.
-ldapserver_1  | 59b6f026 slapd starting
-ldapserver_1  | 59b6f026 bdb(dc=nodomain): BDB0060 PANIC: fatal region error detected; run recovery
-verdaccio_1   |  warn --- http address - http://0.0.0.0:4873/ - verdaccio/2.3.6
-
-
+ ---> d89640f08005
+Successfully built d89640f08005
+Successfully tagged ldap-verdaccio_verdaccio:latest
+Recreating verdaccio-ldap-1 ... done
+Recreating openldap         ... done
+Recreating ldap-verdaccio_openldap-seed_1 ... done
+Recreating openldap-admin                 ... done
+Attaching to verdaccio-ldap-1, openldap, ldap-verdaccio_openldap-seed_1, openldap-admin
+verdaccio-ldap-1  |  warn --- config file  - /verdaccio/conf/config.yaml
+openldap          | *** CONTAINER_LOG_LEVEL = 3 (info)
+verdaccio-ldap-1  |  warn --- Plugin successfully loaded: ldap
+openldap          | *** Search service in CONTAINER_SERVICE_DIR = /container/service :
+openldap          | *** link /container/service/:ssl-tools/startup.sh to /container/run/startup/:ssl-tools
+openldap          | *** link /container/service/slapd/startup.sh to /container/run/startup/slapd
+openldap          | *** link /container/service/slapd/process.sh to /container/run/process/slapd/run
+openldap          | *** Set environment for startup files
+openldap          | *** Environment files will be proccessed in this order : 
+openldap          | Caution: previously defined variables will not be overriden.
+openldap          | /container/environment/99-default/default.startup.yaml
+openldap          | /container/environment/99-default/default.yaml
 ``` 
-
-To force recreate the images.
-
-```bash
-docker-compose up --build --force-recreate -d
-```
 
 To stop all containers
 
@@ -56,18 +68,15 @@ To stop all containers
 docker-compose stop
 ```
 
-To display container logs
+## Credentials
 
-```bash
-➜ docker-compose logs
-Attaching to ldapverdaccio_ldapserver_1, ldapverdaccio_verdaccio_1
-verdaccio_1   |  warn --- config file  - /verdaccio/conf/config.yaml
-verdaccio_1   |  warn --- http address - http://0.0.0.0:4873/ - verdaccio/2.3.6
-ldapserver_1  | 59b6f026 @(#) $OpenLDAP: slapd  (Ubuntu) (May 25 2015 13:12:01) $
-ldapserver_1  | 	buildd@toyol:/build/buildd/openldap-2.4.31/debian/build/servers/slapd
-ldapserver_1  | 59b6f026 hdb_db_open: database "dc=nodomain": unclean shutdown detected; attempting recovery.
-ldapserver_1  | 59b6f026 hdb_db_open: database "dc=openstack,dc=org": unclean shutdown detected; attempting recovery.
-ldapserver_1  | 59b6f026 slapd starting
-ldapserver_1  | 59b6f026 bdb(dc=nodomain): BDB0060 PANIC: fatal region error detected; run recovery
+You can find the complete list of user on `people.ldif` file. However here a brief list of credentials.
+
 ```
+marpontes: pass
+zach: pass
+leonardo: pass
+```
+
+
 

@@ -35,44 +35,14 @@ services:
     container_name: openldap-admin
     hostname: openldap-admin
     environment:
-      PHPLDAPADMIN_LDAP_HOSTS: "openldap"
       PHPLDAPADMIN_HTTPS=false:
+      PHPLDAPADMIN_LDAP_HOSTS: "openldap"
     ports:
       - "8080:80"
     links:
       - "openldap:openldap"
-    environment:
-      - PHPLDAPADMIN_LDAP_HOSTS=openldap
-  # ldap:
-  #   image: osixia/openldap:latest
-  #   container_name: ldap
-  #   command: --copy-service
-  #   environment:
-  #     LDAP_SSL_HELPER_PREFIX: "ldap"
-  #     LDAP_TLS_VERIFY_CLIENT: "never"
-  #     LDAP_LOG_LEVEL: 256
-  #   tty: true
-  #   stdin_open: true
-  #   entrypoint: '/ldif_files/importData.sh'
-  #   volumes:
-  #     - ./ldif:/ldif_files
-  #   ports:
-  #     - "389:389"
-  #     - "636:636"
-  #   links:
-  #       - verdaccio-ldap
-  # phpldapadmin:
-  #   image: osixia/phpldapadmin:latest
-  #   container_name: phpldapadmin
-  #   environment:
-  #     PHPLDAPADMIN_LDAP_HOSTS: "ldap"
-  #     PHPLDAPADMIN_HTTPS=false:
-  #   ports:
-  #     - "8080:80"
-  #   links:
-  #       - ldap
-  #   depends_on:
-  #     - ldap
+    depends_on:
+      - openldap
 volumes:
   verdaccio:
     driver: local
