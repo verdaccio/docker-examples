@@ -24,3 +24,14 @@ The following examples aims to be demonstrative and can be either improved or up
 * Kubernetes Helm and Verdaccio Chart (Basic Tutorial)
 
 ![alt verdaccio](https://www.verdaccio.org/img/devops_support_grey.png "verdaccio devops")
+
+
+### External 
+
+* [
+Verdaccio examples for Google Cloud and K8s setups. https://github.com/papezt/verdaccio-examples](https://github.com/papezt/verdaccio-examples)
+
+
+### Articles
+
+* [https://medium.com/@tompape/kubernetes-private-npm-registry-fb5f450fa611](https://medium.com/@tompape/kubernetes-private-npm-registry-fb5f450fa611)
