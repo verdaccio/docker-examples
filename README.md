@@ -17,6 +17,7 @@ The following examples aims to be demonstrative and can be either improved or up
 * [Docker + LDAP (OpenLDAP) Server + Verdaccio](ldap-verdaccio/readme.md)
 * [Docker + Gitlab](gitlab-verdaccio/README.md)
 * [Docker + https-portal Example](https-portal-example/README.md)
+* [Docker + Active Directory](https://github.com/Mateus-Oli/verdaccio-ad-docker)
 
 ### Kubernetes
 
