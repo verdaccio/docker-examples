@@ -149,6 +149,10 @@ deployment.extensions "veering-gorilla-verdaccio" scaled
 
 I had this issue trying to install verdaccio helm, to solve it I just run a command and all works perfectly.
 
+### [Registered user can't login](https://github.com/verdaccio/verdaccio/issues/943)
+
+If you are facing this issue please read the following link https://github.com/verdaccio/verdaccio/issues/943#issuecomment-427670085
+
 ### Connection refused
 
 ```
