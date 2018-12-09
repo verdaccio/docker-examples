@@ -6,7 +6,7 @@ The objective of this repository is hold the most common configuration for `verd
 
 ## Login 
 
-If you want to login into the Verdaccio instance creating via these Docker Examples, please try:
+If you want to login into the Verdaccio instance created via these Docker Examples, please try:
 
 Username: jpicado
 Password: jpicado
