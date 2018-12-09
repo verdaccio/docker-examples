@@ -15,7 +15,7 @@ brew install kubernetes-helm
 Initialize `helm`.
 
 ```
-➜ helm init
+➜ helm init --service-account default
 Creating /Users/user/.helm
 Creating /Users/user/.helm/repository
 Creating /Users/user/.helm/repository/cache
