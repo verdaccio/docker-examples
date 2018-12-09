@@ -4,13 +4,6 @@ The objective of this repository is hold the most common configuration for `verd
 
 > Feel free to contribute whether you considere any use case is relevant for the public in general.
 
-## Login 
-
-If you want to login into the Verdaccio instance creating via these Docker Examples, please try:
-
-Username: jpicado
-Password: jpicado
-
 ## Examples
 
 The following examples aims to be demonstrative and can be either improved or updated.

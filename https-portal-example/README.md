@@ -61,3 +61,10 @@ Be aware of disable strict SSL in `./npmrc`config file as explained [here](https
 ```
 npm config set strict-ssl false
 ``` 
+
+## Login 
+
+If you want to login into the Verdaccio instance created via these Docker Examples, please try:
+
+Username: jpicado
+Password: jpicado
