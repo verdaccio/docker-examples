@@ -70,8 +70,8 @@
 	},
 	"_uplinks": {
 		"server3": {
-			"etag": "\"5ec45f30cee75b9ca9cbda5063047ef5\"",
-			"fetched": 1549658360657
+			"etag": "\"3ad640b1f8542d53fd0806e5e8462af7\"",
+			"fetched": 1549659258060
 		}
 	},
 	"_distfiles": {
@@ -91,6 +91,6 @@
 			"shasum": "95a21c648054c7144a23995a519930255f35b6c2"
 		}
 	},
-	"_rev": "2-187a84be8f7e43d5",
+	"_rev": "3-0c63867229e7ec25",
 	"readme": "# react-webpack-babel\nSimple React Webpack Babel Starter Kit\n\nTired of complicated starters with 200MB of dependencies which are hard to understand and modify?\n\nTry this is a simple [React](https://facebook.github.io/react/), [Webpack](http://webpack.github.io/) and [Babel](https://babeljs.io/) application with nothing else in it.\n\n### What's in it?\n\n* Simple src/index.jsx and src/index.css (local module css).\n* Webpack configuration for development (with hot reloading) and production (with minification).\n* CSS module loading, so you can include your css by ```import styles from './path/to.css';```.\n* Both js(x) and css hot loaded during development.\n* [Webpack Dashboard Plugin](https://github.com/FormidableLabs/webpack-dashboard) on dev server.\n\n### To run\n\n* You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.\n* Fork and clone the project:\n\n```\ngit clone https://github.com/alicoding/react-webpack-babel.git\n```\n\n* Then install the dependencies:\n\n```\nnpm install\n```\n\n* Run development server:\n\n```\nnpm start\n```\n\n* Or you can run development server with [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard):\n\n```\nnpm run dev\n```\n\nOpen the web browser to `http://localhost:8888/`\n\n### To build the production package\n\n```\nnpm run build\n```\n\n### Nginx Config\n\nHere is an example Nginx config:\n```\nserver {\n\t# ... root and other options\n\n\tgzip on;\n\tgzip_http_version 1.1;\n\tgzip_types text/plain text/css text/xml application/javascript image/svg+xml;\n\n\tlocation / {\n\t\ttry_files $uri $uri/ /index.html;\n\t}\n\n\tlocation ~ \\.html?$ {\n\t\texpires 1d;\n\t}\n\n\tlocation ~ \\.(svg|ttf|js|css|svgz|eot|otf|woff|jpg|jpeg|gif|png|ico)$ {\n\t\taccess_log off;\n\t\tlog_not_found off;\n\t\texpires max;\n\t}\n}\n```\n\n### Eslint\nThere is a .eslint.yaml config for eslint ready with React plugin.\nTo use it, you need to install additional dependencies though:\n\n```\nnpm install --save-dev eslint eslint-plugin-react\n```\n\nTo do the actual linting, run:\n\n```\nnpm run lint\n```\n\n### Notes on importing css styles\n* styles having /src/ in their absolute path are considered part of the application and exported as local css modules.\n* other styles are considered global styles used by many components and are included in the css bundle directly.\n\n### Contribute\nPlease contribute to the project if you know how to make it better, including this README :)"
 }
