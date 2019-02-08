@@ -18,6 +18,7 @@ The following examples aims to be demonstrative and can be either improved or up
 * [Docker + Gitlab](gitlab-verdaccio/README.md)
 * [Docker + https-portal Example](https-portal-example/README.md)
 * [Docker + Active Directory](https://github.com/Mateus-Oli/verdaccio-ad-docker)
+* [Docker + Uplinks Multi Registry](multi-registry-uplink/README.md)
 
 ### Kubernetes
 
@@ -27,7 +28,7 @@ The following examples aims to be demonstrative and can be either improved or up
 ![alt verdaccio](https://www.verdaccio.org/img/devops_support_grey.png "verdaccio devops")
 
 
-### External 
+### External
 
 * [
 Verdaccio examples for Google Cloud and K8s setups. https://github.com/papezt/verdaccio-examples](https://github.com/papezt/verdaccio-examples)
