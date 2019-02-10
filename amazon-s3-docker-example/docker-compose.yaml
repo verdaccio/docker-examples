@@ -1,6 +1,18 @@
 version: '2.1'
 
 services:
+  aws-resources:
+    build: localStack-resources/
+    environment:
+      - AWS_ACCESS_KEY_ID=foobar
+      - AWS_SECRET_ACCESS_KEY=foobar
+      - AWS_DEFAULT_REGION=eu-west-2
+      - AWS_S3_ENDPOINT=http://localstack-s3:4572
+    depends_on:
+      localstack-s3:
+        condition: service_healthy
+    links:
+      - localstack-s3
   localstack-s3:
     image: localstack/localstack:latest
     container_name: localstack-s3
@@ -14,9 +26,9 @@ services:
      - "9999:8080"
     healthcheck:
         test: ["CMD", "curl", "-f", "http://localhost:4572"]
-        interval: 10s
-        timeout: 5s
-        retries: 5
+        interval: 15s
+        timeout: 10s
+        retries: 4
     volumes:
       - localstack-data:/tmp/localstack
   verdaccio:
@@ -40,6 +52,8 @@ services:
       - localstack-s3
 volumes:
   verdaccio:
+    driver: local
+  aws-resources:
     driver: local
   localstack-data:
     name: localstack-data
