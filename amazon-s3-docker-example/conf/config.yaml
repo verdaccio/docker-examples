@@ -2,7 +2,7 @@ storage: /verdaccio/storage
 
 store:
   s3-storage:
-    bucket: localstack-s3-plugin-test
+    bucket: localstack.s3.plugin.test
     keyPrefix: docker-test-prefix
     region: eu-west-2
     endpoint: http://localstack-s3:4572
