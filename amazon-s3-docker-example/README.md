@@ -1,6 +1,6 @@
-# Amazon S3 Bucket and Verdaccio
+# Amazon S3 Bucket (Localstack) and Verdaccio
 
-This is currently under development ....
+Verdaccio running with [Localstack](https://github.com/localstack/localstack) provides an easy-to-use test/mocking framework for developing Cloud applications (AWS S3 in our example).
 
 ## Usage
 
