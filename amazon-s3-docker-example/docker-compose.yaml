@@ -1,0 +1,41 @@
+version: '2.1'
+
+services:
+  localstack-s3:
+    image: localstack/localstack:latest
+    container_name: localstack-s3
+    environment:
+     - SERVICES=s3:5002
+     - DEFAULT_REGION=eu-west-2
+     - DATA_DIR=/tmp/localstack/data
+    ports:
+     - "5002:5002"
+     - "9999:8080"
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:5002"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+    volumes:
+      - localstack-data:/tmp/localstack
+  verdaccio:
+    container_name: verdaccio-s3-plugin
+    build: s3Plugin/
+    environment:
+        - AWS_ACCESS_KEY_ID=something
+        - AWS_SECRET_ACCESS_KEY=something
+    ports:
+      - "4873:4873"
+    volumes:
+      - "./storage:/verdaccio/storage"
+      - "./conf:/verdaccio/conf"
+    depends_on:
+      localstack-s3:
+        condition: service_healthy
+    links:
+      - localstack-s3
+volumes:
+  verdaccio:
+    driver: local
+  localstack-data:
+    name: localstack-data
