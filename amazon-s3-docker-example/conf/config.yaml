@@ -1,11 +1,11 @@
 storage: /verdaccio/storage
 
 store:
-  s3-storage-example:
+  s3-storage:
     bucket: my.unique.bucket.name
     keyPrefix: docker-test-prefix
     region: eu-west-2
-    endpoint: http://localstack-s3:5002
+    endpoint: http://localstack-s3:4572
 
 uplinks:
   npmjs:

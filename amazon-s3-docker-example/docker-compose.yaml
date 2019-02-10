@@ -5,14 +5,15 @@ services:
     image: localstack/localstack:latest
     container_name: localstack-s3
     environment:
-     - SERVICES=s3:5002
+     - DEBUG=1
+     - SERVICES=s3
      - DEFAULT_REGION=eu-west-2
      - DATA_DIR=/tmp/localstack/data
     ports:
-     - "5002:5002"
+     - "4572:4572"
      - "9999:8080"
     healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:5002"]
+        test: ["CMD", "curl", "-f", "http://localhost:4572"]
         interval: 10s
         timeout: 5s
         retries: 5
@@ -22,10 +23,13 @@ services:
     container_name: verdaccio-s3-plugin
     build: s3Plugin/
     environment:
-        - AWS_ACCESS_KEY_ID=something
-        - AWS_SECRET_ACCESS_KEY=something
+      - AWS_ACCESS_KEY_ID=foobar
+      - AWS_SECRET_ACCESS_KEY=foobar
+      - AWS_DEFAULT_REGION=eu-west-2
+      - AWS_S3_ENDPOINT=http://localstack-s3:4572
+      - AWS_S3_PATH_STYLE=true
     ports:
-      - "4873:4873"
+      - "4874:4873"
     volumes:
       - "./storage:/verdaccio/storage"
       - "./conf:/verdaccio/conf"
