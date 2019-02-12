@@ -2,6 +2,8 @@
 
 This example will use the latest `verdaccio` tag. If you want you set a different that, update the `deployment.yaml` file.
 
+⚠️ There is newer Kubernates example here that worh to check it out https://github.com/verdaccio/docker-examples/tree/master/kubernetes-helm-example
+
 * Install Minikube
 
 https://github.com/kubernetes/minikube
