@@ -17,7 +17,7 @@ services:
     image: localstack/localstack:latest
     container_name: localstack-s3
     environment:
-     - DEBUG=1
+     - DEBUG=0
      - SERVICES=s3
      - DEFAULT_REGION=eu-west-2
      - DATA_DIR=/tmp/localstack/data
