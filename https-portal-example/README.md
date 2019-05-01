@@ -50,7 +50,7 @@ docker-compose stop
 
 From your Javascript project
 
-```
+```bash
 npm publish --registry https://example.com
 ```
 
@@ -58,9 +58,9 @@ npm publish --registry https://example.com
 
 Be aware of disable strict SSL in `./npmrc`config file as explained [here](https://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm).
 
-```
+```bash
 npm config set strict-ssl false
-``` 
+```
 
 ## Login 
 
