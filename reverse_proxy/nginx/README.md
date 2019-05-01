@@ -2,6 +2,12 @@
 
 Running `verdaccio` via reverse proxy is a common practice. This configuration provides a quick way to run the application behind **nginx**.
 
+This folder provides the following examples:
+
+
+* root_path: Using reverse proxy with `/` as a path.
+* relative_path: Using `/verdaccio/` as a subdirectory. 
+
 
 To run the containers, run the following in this folder, it should starts the containers in dettach mode.
 

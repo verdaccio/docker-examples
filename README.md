@@ -11,7 +11,7 @@ The following examples aims to be demonstrative and can be either improved or up
 ### Docker
 
 * [Docker + Apache + Verdaccio](apache-verdaccio/README.md)
-* [Docker + Nginx + Verdaccio](nginx-verdaccio/README.md)
+* [Docker + Nginx + Verdaccio](reverse_proxy/nginx/README.md)
 * [Docker + Local Storage](docker-local-storage-volume/readme.md)
 * [Docker + External Plugins](docker-plugin-external/README.md)
 * [Docker + LDAP (OpenLDAP) Server + Verdaccio](ldap-verdaccio/readme.md)
