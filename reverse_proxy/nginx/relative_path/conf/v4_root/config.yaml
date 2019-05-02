@@ -18,10 +18,6 @@ security:
     sign:
       expiresIn: 7d
 
-## IMPORTANT
-##
-url_prefix: /verdaccio
-
 uplinks:
   npmjs:
     url: https://registry.npmjs.org/

@@ -13,8 +13,9 @@ services:
     depends_on:
       - verdaccio
       - verdaccio3
+      - verdaccio-root
   verdaccio:
-    image: verdaccio/verdaccio:4.0.0-beta.5
+    image: verdaccio/verdaccio:test9
     container_name: "verdaccio_relative_path_v4"
     networks:
       - node-network
@@ -25,6 +26,18 @@ services:
     volumes:
       - "./storage:/verdaccio/storage"
       - "./conf/v4:/verdaccio/conf"
+  verdaccio-root:
+    image: verdaccio/verdaccio:test9
+    container_name: "verdaccio_relative_path_v4_root"
+    networks:
+      - node-network
+    environment:
+      - VERDACCIO_PORT=8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./storage:/verdaccio/storage"
+      - "./conf/v4_root:/verdaccio/conf"
   verdaccio3:
     image: verdaccio/verdaccio:latest
     container_name: "verdaccio_relative_path_latest_v3"
