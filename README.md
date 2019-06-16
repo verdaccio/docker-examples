@@ -38,3 +38,4 @@ Verdaccio examples for Google Cloud and K8s setups. https://github.com/papezt/ve
 ### Articles
 
 * [https://medium.com/@tompape/kubernetes-private-npm-registry-fb5f450fa611](https://medium.com/@tompape/kubernetes-private-npm-registry-fb5f450fa611)
+* [Déployer Verdaccio sur rancher avec un helm](https://tommygingras.com/deployer-verdaccio-sur-rancher-avec-un-helm/)
