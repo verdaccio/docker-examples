@@ -43,7 +43,6 @@ services:
     ports:
       - "4874:4873"
     volumes:
-      - "./storage:/verdaccio/storage"
       - "./conf:/verdaccio/conf"
     depends_on:
       localstack-s3:
