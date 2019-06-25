@@ -7,3 +7,8 @@ Verdaccio running with [Localstack](https://github.com/localstack/localstack) pr
 ```
 docker-compose up --force-recreate --build --always-recreate-deps
 ```
+
+
+## Articles
+
+* [How to fake AWS locally with LocalStack](https://dev.to/goodidea/how-to-fake-aws-locally-with-localstack-27me)
