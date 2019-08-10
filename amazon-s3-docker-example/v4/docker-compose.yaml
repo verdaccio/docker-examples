@@ -15,7 +15,7 @@ services:
       - localstack-s3
   localstack-s3:
     image: localstack/localstack:latest
-    container_name: localstack-s3
+    container_name: localstack-s3-1
     environment:
      - DEBUG=0
      - SERVICES=s3

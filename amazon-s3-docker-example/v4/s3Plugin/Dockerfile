@@ -1,6 +1,4 @@
-FROM verdaccio/verdaccio:fix-1360
-## This image is based on verdaccio@4.0.4
-## requires this https://github.com/verdaccio/verdaccio/pull/1360 which will turns out 4.1.x soon
+FROM verdaccio/verdaccio:4.2.1
 
 USER root
 
