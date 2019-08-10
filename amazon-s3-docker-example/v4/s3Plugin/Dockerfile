@@ -11,5 +11,5 @@ RUN apk --no-cache add openssl ca-certificates wget && \
     wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-2.25-r0.apk && \
     apk add glibc-2.25-r0.apk
 
-RUN npm i && npm install verdaccio-aws-s3-storage@0.1.0 --registry https://registry.verdaccio.org
+RUN npm i && npm install verdaccio-aws-s3-storage@8.0.0-next.2
 USER verdaccio
