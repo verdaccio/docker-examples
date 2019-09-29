@@ -20,7 +20,8 @@ The following examples aims to be demonstrative and can be either improved or up
 * [Docker + https-portal Example](https-portal-example/README.md)
 * [Docker + Active Directory](https://github.com/Mateus-Oli/verdaccio-ad-docker)
 * [Docker + Uplinks Multi Registry](multi-registry-uplink/README.md)
-* [Docker + AWS S3 Plugin(localstack) ](amazon-s3-docker-example/v4/README.md) (Experimental)
+* [Docker + AWS S3 Plugin(localstack) + Verdaccio 4](amazon-s3-docker-example/v4/README.md)
+* [Docker + AWS S3 Plugin(localstack)  + Verdaccio 3](amazon-s3-docker-example/v3/README.md)
 
 ### Kubernetes
 
