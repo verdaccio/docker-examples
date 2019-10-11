@@ -2,7 +2,7 @@
 
 This example will use the latest `verdaccio` tag. If you want you set a different that, update the `deployment.yaml` file.
 
-⚠️ There is newer Kubernates example here that worh to check it out https://github.com/verdaccio/docker-examples/tree/master/kubernetes-helm-example
+⚠️ There is newer Kubernetes example here that is woth to check out https://github.com/verdaccio/docker-examples/tree/master/kubernetes-helm-example
 
 * Install Minikube
 
@@ -25,7 +25,7 @@ $> kubectl create -f deployment.yaml
 deployment "verdaccio-deployment" created
 ```
 
-* Check whether the Deployment was successful
+* Check whether the deployment was successful
 
 ```bash
 $> kubectl get deployments
@@ -39,7 +39,7 @@ verdaccio-deployment   1         1         1            1           19m
 $> kubectl create -f service.yaml
 ```
 
-* Check the Service
+* Check the service
 
 ```bash
 kubectl get services
@@ -54,7 +54,7 @@ verdaccio    10.0.0.160   <pending>     4873:30061/TCP   20m
 http://192.168.99.100:30061/
 ```
 
-You can see the Dashboard in action
+You can see the dashboard in action
 
 ```
 http://192.168.99.100:30000/#!/service?namespace=default

@@ -30,7 +30,7 @@ packages:
 
 ## Usage
 
-To run the containers, run the following command in this folder, it should starts the containers in dettach mode.
+To run the containers, run the following command in this folder, it should starts the containers in detach mode.
 
 ```bash
 ➜ docker-compose up --force-recreate --build
@@ -77,7 +77,7 @@ docker-compose stop
 
 ## Credentials
 
-You can find the complete list of user on `people.ldif` file. However here a brief list of credentials.
+You can find the complete list of users in the `people.ldif` file. However here a brief list of credentials.
 
 ```
 marpontes: pass

@@ -9,7 +9,7 @@ This folder provides the following examples:
 * relative_path: Using `/verdaccio/` as a subdirectory. It includes also SSL examples with reverse proxy. 
 
 
-To run the containers, run the following in this folder, it should starts the containers in dettach mode.
+To run the containers, run the following commands in this folder. The containers should start in detach mode.
 
 ```bash
  docker-compose up -d

@@ -1,9 +1,9 @@
 # Verdaccio and Apache2
 
-Running `verdaccio` via reverse proxy is a common practice. This configuration provides a quick way to run the application throught **apache2** as reverse proxy.
+Running `verdaccio` via reverse proxy is a common practice. This configuration provides a quick way to run the application through **apache2** as reverse proxy.
 
 
-To run the containers, run the following command in this folder, it should starts the containers in dettach mode.
+To run the containers, run the following command in this folder, it should start the containers in detach mode.
 
 ```bash
  docker-compose up -d
