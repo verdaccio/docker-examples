@@ -21,7 +21,7 @@ store:
 
 ### Example
 
-To run the containers, run the following in this folder, it should starts the containers in dettach mode.
+To run the containers, run the following command in this folder, it should start the containers in detach mode.
 
 ```bash
 $> docker-compose up -d

@@ -1,10 +1,10 @@
 # Verdaccio and https-portal Example
 
-Run `verdaccio` under fully automated HTTPS server powered by Nginx, Let's Encrypt  was never so easy. Using [https-portal](https://github.com/SteveLTN/https-portal) all is builtin and no need to extra configuration.
+Run `verdaccio` under fully automated HTTPS server powered by Nginx, Let's Encrypt  was never so easy. Using [https-portal](https://github.com/SteveLTN/https-portal) all is builtin and no need for extra configuration.
 
 ## Prerequisites
 
-In order to make it works, this is just a local setup, so you must update your `host` file.
+In order to make it work, this is just a local setup, so you must update your `host` file.
 
 On Mac
 
@@ -24,7 +24,7 @@ On Mac
 
 ## Usage
 
-To run the containers, run the following in this folder, it should starts the containers in dettach mode.
+To run the containers, run the followingcommands  in this folder, it should start the containers in detach mode.
 
 ```bash
  docker-compose up -d
@@ -54,9 +54,9 @@ From your Javascript project
 npm publish --registry https://example.com
 ```
 
-## NPM and Self-signed certificates
+## NPM and self-signed certificates
 
-Be aware of disable strict SSL in `./npmrc`config file as explained [here](https://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm).
+Be aware of disabling strict SSL in `./npmrc`config file as explained [here](https://stackoverflow.com/questions/9626990/receiving-error-error-ssl-error-self-signed-cert-in-chain-while-using-npm).
 
 ```bash
 npm config set strict-ssl false

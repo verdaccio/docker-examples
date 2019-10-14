@@ -1,6 +1,6 @@
 # Verdaccio and simple local storage
 
-This example show a simple configuration `verdaccio` plus the default local storage with the minimum configuration required using `docker-compose`.
+This example shows a simple configuration for `verdaccio` plus the default local storage with the minimum configuration required using `docker-compose`.
 
 Contains
 
@@ -20,7 +20,7 @@ Password: jpicado
 
 ## Running in Dokku
 
-If you use the Dokku, a open-source alternative for Heroku, you can run this example using the following steps:
+If you use Dokku, an open-source alternative for Heroku, you can run this example using the following steps:
 
 1. Create a new application `dokku apps:create verdaccio`
 2. Pull the verdaccio image `docker pull verdaccio/verdaccio:`

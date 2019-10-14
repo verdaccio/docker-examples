@@ -1,12 +1,12 @@
 # Verdaccio Docker + Kubernetes Examples
 
-The objective of this repository is hold the most common configuration for `verdaccio` for different use cases in **Docker**.
+The objective of this repository is to hold the most common configuration for `verdaccio` for different use cases in **Docker**.
 
-> Feel free to contribute whether you considere any use case is relevant for the public in general.
+> Feel free to contribute whether you consider any use case is relevant for the public in general.
 
 ## Examples
 
-The following examples aims to be demonstrative and can be either improved or updated.
+The following examples aim to be demonstrative and can be either improved or updated.
 
 ### Docker
 
