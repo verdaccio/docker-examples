@@ -1,4 +1,15 @@
-# Verdaccio Docker + Kubernetes Examples
+# Docker + Kubernetes Examples
+
+![alt verdaccio](https://cdn.verdaccio.dev/logos/verdaccio@2x.png "verdaccio devops")
+
+[![docker pulls](https://img.shields.io/docker/pulls/verdaccio/verdaccio.svg?maxAge=43200)](https://verdaccio.org/docs/en/docker.html)
+[![backers](https://opencollective.com/verdaccio/tiers/backer/badge.svg?label=Backer&color=brightgreen)](https://opencollective.com/verdaccio)
+[![stackshare](https://img.shields.io/badge/Follow%20on-StackShare-blue.svg?logo=stackshare&style=flat)](https://stackshare.io/verdaccio)
+[![discord](https://img.shields.io/discord/388674437219745793.svg)](http://chat.verdaccio.org/)
+
+[![Twitter followers](https://img.shields.io/twitter/follow/verdaccio_npm.svg?style=social&label=Follow)](https://twitter.com/verdaccio_npm)
+[![Github](https://img.shields.io/github/stars/verdaccio/verdaccio.svg?style=social&label=Stars)](https://github.com/verdaccio/verdaccio/stargazers)
+
 
 The objective of this repository is to hold the most common configuration for `verdaccio` for different use cases in **Docker**.
 
@@ -10,18 +21,31 @@ The following examples aim to be demonstrative and can be either improved or upd
 
 ### Docker
 
+#### Proxies
+
 * [Docker + Apache + Verdaccio](apache-verdaccio/README.md)
 * [Docker + Nginx + Verdaccio](reverse_proxy/nginx/README.md)
+* [Docker + https-portal Example](https-portal-example/README.md)
+
+#### Plugins
+
+* [Docker + Uplinks Multi Registry](multi-registry-uplink/README.md)
 * [Docker + Local Storage](docker-local-storage-volume/readme.md)
 * [Docker + External Plugins](docker-plugin-external/README.md)
+
+#### Auth
+
 * [Docker + LDAP (OpenLDAP) Server + Verdaccio 3](ldap-verdaccio/readme.md)
 * [Docker + LDAP (OpenLDAP) Server + Verdaccio 4](ldap-verdaccio-v4/readme.md) by **@kopax**
 * [Docker + Gitlab](gitlab-verdaccio/README.md)
-* [Docker + https-portal Example](https-portal-example/README.md)
 * [Docker + Active Directory](https://github.com/Mateus-Oli/verdaccio-ad-docker)
-* [Docker + Uplinks Multi Registry](multi-registry-uplink/README.md)
+
+
+#### Storage
+
 * [Docker + AWS S3 Plugin(localstack) + Verdaccio 4](amazon-s3-docker-example/v4/README.md)
 * [Docker + AWS S3 Plugin(localstack)  + Verdaccio 3](amazon-s3-docker-example/v3/README.md)
+* [Docker + Minio](https://github.com/barolab/verdaccio-minio/tree/master/example)
 
 ### Kubernetes
 
